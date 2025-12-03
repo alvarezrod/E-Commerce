@@ -199,3 +199,49 @@ function refresh() {
   updateCartSummary();
   updateCartTotal();
 }
+
+// modal aboutus
+document.getElementById("aboutUs").addEventListener("click", function () {
+  // Crear el modal si no existe
+  let aboutModal = document.getElementById("aboutUsModal");
+  if (!aboutModal) {
+    aboutModal = document.createElement("div");
+    aboutModal.id = "aboutUsModal";
+    aboutModal.style.position = "fixed";
+    aboutModal.style.top = "50%";
+    aboutModal.style.left = "50%";
+    aboutModal.style.transform = "translate(-50%, -50%)";
+    aboutModal.style.background = "#fff";
+    aboutModal.style.padding = "24px 36px";
+    aboutModal.style.border = "1px solid #ccc";
+    aboutModal.style.boxShadow = "0 2px 8px rgba(0,0,0,0.2)";
+    aboutModal.style.zIndex = "1000";
+    aboutModal.style.fontSize = "1em";
+    aboutModal.style.borderRadius = "10px";
+    aboutModal.style.display = "none";
+    // Cerrar botón
+    const closeBtn = document.createElement("button");
+    closeBtn.textContent = "✖";
+    closeBtn.style.position = "absolute";
+    closeBtn.style.top = "8px";
+    closeBtn.style.right = "12px";
+    closeBtn.style.background = "transparent";
+    closeBtn.style.border = "none";
+    closeBtn.style.fontSize = "1.2em";
+    closeBtn.style.cursor = "pointer";
+    closeBtn.onclick = function () {
+      aboutModal.style.display = "none";
+    };
+    aboutModal.appendChild(closeBtn);
+
+    // Contenido
+    const content = document.createElement("div");
+    content.style.marginTop = "16px";
+    content.textContent =
+      "We are a leading music store dedicated to providing high-quality instruments and exceptional customer service. Our mission is to inspire musicians of all levels to pursue their passion for music.";
+    aboutModal.appendChild(content);
+
+    document.body.appendChild(aboutModal);
+  }
+  aboutModal.style.display = "block";
+});

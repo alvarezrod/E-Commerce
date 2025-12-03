@@ -5,9 +5,9 @@ const products = [
     name: "Fender Stratocaster® H.E.R. Limited Edition",
     price: 199.99,
   },
-  { code: "cod34", name: "Drum Set", price: 499.99 },
-  { code: "cod56", name: "Keyboard", price: 299.99 },
-  { code: "cod78", name: "Microphone", price: 149.99 },
+  { code: "cod34", name: "Drum Set Maple Complete 5 Pieces", price: 499.99 },
+  { code: "cod56", name: "Keyboard Yamaha PSR-E373", price: 299.99 },
+  { code: "cod78", name: "Hayden HY-12 wireless Microphone", price: 149.99 },
   { code: "cod90", name: "Guitar Amplifier", price: 249.99 },
 ];
 
@@ -157,7 +157,7 @@ function showProductAddedModal() {
     modal.style.border = "1px solid #ccc";
     modal.style.boxShadow = "0 2px 8px rgba(0,0,0,0.2)";
     modal.style.zIndex = "1000";
-    modal.style.fontSize = "1.2em";
+    modal.style.fontSize = "1em";
     modal.style.borderRadius = "8px";
     modal.style.display = "none";
     modal.textContent = "💥 Producto agregado";
